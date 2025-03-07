@@ -9,7 +9,7 @@ const dateOptions = {
     { name: "My Neighbor Totoro", link: "https://www.levidia.ch/movie.php?watch=tonari-no-totoro-1988-" },
     { name: "The Absolute Saddest Movie of All Time", link: "https://www.levidia.ch/movie.php?watch=hotaru-no-haka-1988-" },
     { name: "Spider-Man: Into the Spider-Verse", link: "https://www.disneyplus.com/" },
-    { name: "Pride & Prejudice", link: "https://www.amazon.com/" },
+    { name: "Anora", link: "https://www.levidia.ch/movie.php?watch=anora" },
     { name: "The Social Network", link: "https://www.netflix.com/" }
   ],
   "TV Shows": [
