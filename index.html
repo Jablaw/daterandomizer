@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Date Randomizer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+      transition: 0.2s;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .hidden {
+      display: none;
+    }
+    input, select {
+      padding: 5px;
+      font-size: 16px;
+      margin: 5px;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+    #displayArea {
+      margin-top: 20px;
+      font-size: 16px;
+      text-align: left;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .rating span {
+      cursor: pointer;
+      font-size: 22px;
+      color: gray;
+    }
+    .rating span:hover,
+    .rating span.active {
+      color: gold;
+    }
+  </style>
+  <!-- Load default options first -->
+  <script src="data.js"></script>
+  <!-- Then load main functionality -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>Long Distance Date Randomizer</h1>
+
+  <div>
+    <label for="categoryFilter">Choose a Category:</label>
+    <select id="categoryFilter">
+      <option value="random">Random</option>
+      <option value="Movies">Movies</option>
+      <option value="TV Shows">TV Shows</option>
+      <option value="Games">Games</option>
+    </select>
+  </div>
+
+  <div>
+    <button id="randomizeBtn">Pick a Date Idea</button>
+    <button id="skipBtn" class="hidden">Skip This Date</button>
+    <button id="confirmBtn" class="hidden">Confirm This Date</button>
+  </div>
+
+  <div id="result"></div>
+
+  <div id="rating" class="hidden">
+    <p>Rate this Date:</p>
+    <div class="rating">
+      <span data-rating="1">★</span>
+      <span data-rating="2">★</span>
+      <span data-rating="3">★</span>
+      <span data-rating="4">★</span>
+      <span data-rating="5">★</span>
+    </div>
+  </div>
+
+  <div>
+    <button id="viewAllBtn">View All Options</button>
+    <button id="viewPastBtn">View Past Dates</button>
+  </div>
+
+  <div id="displayArea" class="hidden"></div>
+
+  <hr />
+
+  <h2>Add a New Date Idea</h2>
+  <div>
+    <label for="newCategory">Category:</label>
+    <select id="newCategory">
+      <option value="Movies">Movies</option>
+      <option value="TV Shows">TV Shows</option>
+      <option value="Games">Games</option>
+    </select>
+  </div>
+  <div>
+    <input type="text" id="newName" placeholder="Enter date idea" />
+    <input type="text" id="newLink" placeholder="Enter link (optional)" />
+    <button id="addBtn">Add Date Idea</button>
+  </div>
+  <p id="addMessage"></p>
+</body>
+</html>
